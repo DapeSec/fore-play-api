@@ -1,4 +1,4 @@
-import db from "../../backend/db/connection.js";
+import db from "./db/connection.js";
 
 const resolvers = {
   Proposal: {

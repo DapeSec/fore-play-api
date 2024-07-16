@@ -10,10 +10,10 @@
   },
   "name": "fore-play-api",
   "version": "1.0.0",
-  "main": "src/server.js",
+  "main": "./src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js"
+    "start": "node ./src/server.js"
   },
   "keywords": [],
   "author": "",
