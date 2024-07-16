@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import records from "./routes/record.js";
+import proposals from "./routes/proposal.js";
 
 import gql from "graphql-tag";
 import { ApolloServer } from '@apollo/server';
@@ -29,7 +29,7 @@ const server = new ApolloServer({
 // instance before passing the instance to `expressMiddleware`
 await server.start();
 
-app.use("/record", records);
+app.use("/proposal", proposals);
 app.use(
   '/graphql',
   cors(),
