@@ -1,0 +1,15 @@
+type Proposal {
+  id: ID
+  userId: String
+  proposalDate: String
+}
+
+type Query {
+  proposal(proposalId:ID!): Proposal
+  proposals: [Proposal]
+}
+
+type Mutation {
+  createProposal(userId: String!, proposalDate: String!): Proposal
+  deleteProposal(id: ID!): Boolean
+}
