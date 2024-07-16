@@ -10,7 +10,7 @@
   },
   "name": "fore-play-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "/backend/src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node /backend/src/server.js"
