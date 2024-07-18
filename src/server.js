@@ -17,9 +17,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
-const typeDefs =
-  'scalar Date'
+const typeDefs = 
+  //'scalar Date'
   gql(
     readFileSync("schema.graphql", {
       encoding: "utf-8",
@@ -27,7 +26,10 @@ const typeDefs =
   );
 
 const server = new ApolloServer({
-  schema: buildSubgraphSchema({ typeDefs, resolvers }),
+  schema: buildSubgraphSchema({ typeDefs, resolvers}),
+  schemaDirectives: {
+    date: DateScalar, // Add the scalar to schema directives
+  },
 });
 // Note you must call `start()` on the `ApolloServer`
 // instance before passing the instance to `expressMiddleware`

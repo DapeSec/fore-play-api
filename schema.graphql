@@ -1,3 +1,5 @@
+scalar Date
+
 type Proposal {
   id: ID
   userId: String

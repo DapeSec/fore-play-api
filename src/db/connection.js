@@ -21,6 +21,6 @@ try {
   console.error(err);
 }
 
-let db = client.db("fore-play");
+let db = client.db("fore-play-api");
 
 export default db;
