@@ -1,7 +1,7 @@
 type Proposal {
   id: ID
   userId: String
-  proposalDate: String
+  proposalDate: Date
 }
 
 type Query {
@@ -10,6 +10,6 @@ type Query {
 }
 
 type Mutation {
-  createProposal(userId: String!, proposalDate: String!): Proposal
+  createProposal(userId: String!, proposalDate: Date!): Proposal
   deleteProposal(id: ID!): Boolean
 }
