@@ -9,7 +9,7 @@ import { expressMiddleware } from '@apollo/server/express4';
 import resolvers from "./resolvers.js";
 import { readFileSync } from "fs";
 
-import DateScalar from './DateScalar';
+import DateScalar from './DateScalar.js';
 
 const PORT = process.env.PORT || 5050;
 const app = express();
