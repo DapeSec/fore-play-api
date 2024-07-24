@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import proposals from "./routes/proposal.js";
+import approvals from "./routes/approval.js";
 
 import gql from "graphql-tag";
 import { ApolloServer } from '@apollo/server';
@@ -36,6 +37,7 @@ const server = new ApolloServer({
 await server.start();
 
 app.use("/proposal", proposals);
+app.use("/approval", approvals);
 app.use(
   '/graphql',
   cors(),

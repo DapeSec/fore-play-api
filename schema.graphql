@@ -6,12 +6,24 @@ type Proposal {
   proposalDate: Date
 }
 
+type Approval {
+  id: ID
+  userId: String
+  approvalDate: Date
+  approval: Boolean
+}
+
 type Query {
   proposal(proposalId:ID!): Proposal
   proposals: [Proposal]
+  approvalById(approvalId:ID!): Approval
+  approvalByUserId(approvalUserId:String!): Approval
+  approvals: [Approval]
 }
 
 type Mutation {
   createProposal(userId: String!, proposalDate: Date!): Proposal
   deleteProposal(id: ID!): Boolean
+  createApproval(userId: String!, approvalDate: Date!, approval: Boolean!): Approval
+  deleteApproval(id: ID!): Boolean
 }
