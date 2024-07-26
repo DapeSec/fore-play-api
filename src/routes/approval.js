@@ -18,6 +18,19 @@ router.get("/", async (req, res) => {
   res.send(results).status(200);
 });
 
+router.get("/approved", async (req, res) => {
+  let collection = await db.collection("approvals");
+  let query = { approval: true };
+  let result = await collection.find(query).toArray();
+
+  if (result.length === 0) {
+    res.status(404).send("No approved records found");
+  } else {
+    res.status(200).send(result);
+  }
+});
+
+
 // This section will help you get a single record by id
 router.get("/:id", async (req, res) => {
   let collection = await db.collection("approvals");

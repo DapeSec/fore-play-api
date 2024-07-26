@@ -19,6 +19,7 @@ type Query {
   approvalById(approvalId:ID!): Approval
   approvalByUserId(approvalUserId:String!): Approval
   approvals: [Approval]
+  approvalsApproved: [Approval]
 }
 
 type Mutation {

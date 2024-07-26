@@ -33,6 +33,12 @@ const resolvers = {
       const approvals = await collection.find({}).toArray();
       return approvals;
     },
+    async approvalsApproved(_, __, context) {
+      let collection = await db.collection("approvals");
+      let query = { approval: true }; // Filter by isApproved: true
+      const approvals = await collection.find(query).toArray();
+      return approvals;
+    },    
   },
   Mutation: {
     async createProposal(_, { userId, proposalDate }, context) {

@@ -26,7 +26,7 @@ Coming Soon
 
 4. Create local environment configuration file
 
-Create config.env in ./src/server
+Create config.env in project directory.
 
 5. Add MongoDB Connection String
 
